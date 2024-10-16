@@ -1,6 +1,4 @@
-FROM openjdk:17
-MAINTAINER "Gvskrishna"
-COPY target/my-app /usr/local/tomcat/webapps/my-app
-WORKDIR /usr/app/
+FROM tomcat:8.0.20-jre8
+MAINTAINER siva <gvskrishna9149@gmail.com>
 EXPOSE 8080
-ENTRYPOINT ["java", "-war", "my-app.war"]
+COPY target/maven-web-app.war /usr/local/tomcat/webapps/my-app.war
