@@ -1,6 +1,4 @@
-FROM openjdk:11
-MAINTAINER "Ashok Bollepalli <797979>"
-COPY target/spring-boot-docker-app.jar  /usr/app/
-WORKDIR /usr/app/
+FROM tomcat:8.0.20-jre8
+MAINTAINER GVS
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "spring-boot-docker-app.jar"]
+COPY target/my-app /usr/local/tomcat/webapps/my-app
