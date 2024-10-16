@@ -1,4 +1,4 @@
 FROM tomcat:8.0.20-jre8
-MAINTAINER "GVS"
+MAINTAINER GVS
 EXPOSE 8080
-COPY target/my-app /usr/local/tomcat/webapps/my-app
+COPY target/my-app.war /usr/local/tomcat/webapps/my-app.war
